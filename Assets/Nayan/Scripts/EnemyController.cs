@@ -13,17 +13,20 @@ public class EnemyController : MonoBehaviour
 
     private float attckCoolDown;
     Transform player;
+    PlayerHealth playerHealth;
+    float distance;
 
     private void Start()
     {
         player = PlayerManager.instance.player.transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     private void Update()
     {
         attckCoolDown-=Time.deltaTime;
 
-        float distance = Vector3.Distance(player.position, transform.position);
+        distance = Vector3.Distance(player.position, transform.position);
         animator.SetBool("following", false);
         if (distance <= lookRadius)
         {
@@ -43,7 +46,7 @@ public class EnemyController : MonoBehaviour
     void attack()
     {
         if (attckCoolDown <= 0) {
-            //attack player damage function call here
+            if (distance <= m_Agent.stoppingDistance) { playerHealth.TakeDamge(1); }
             animator.SetTrigger("attack");
             attckCoolDown = attackSpped;
         }
@@ -60,5 +63,12 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    public void TakeDamage()
+    {
+        animator.SetBool("dead", true);
+        gameObject.GetComponent<EnemyController>().enabled = false;
+        Destroy(gameObject, 2);
     }
 }

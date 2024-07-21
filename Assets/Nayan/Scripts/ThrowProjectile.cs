@@ -4,6 +4,7 @@ public class ThrowProjectile : MonoBehaviour
 {
     [SerializeField] GameObject ballPrefab;
     [SerializeField] private float shootForce;
+    private Animator animator;
 
     [SerializeField] private float timeBteweenShooting=3f, timeBetweenShots;
 
@@ -21,6 +22,7 @@ public class ThrowProjectile : MonoBehaviour
     private void Awake()
     {
         readyToShoot = true;
+        animator = PlayerManager.instance.player.GetComponent<Animator>();
     }
 
     private void Update()
@@ -40,6 +42,8 @@ public class ThrowProjectile : MonoBehaviour
         shooting = Input.GetKeyDown(KeyCode.Mouse0);
         GameObject projectile;
         if (readyToShoot && shooting) {
+
+            animator.SetTrigger("attack");
             projectile = Instantiate(ballPrefab, throwPoint.position, throwPoint.rotation);
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
