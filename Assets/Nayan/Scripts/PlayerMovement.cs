@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
@@ -31,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
     float vertical;
     bool isGrounded;
     bool walking;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -59,12 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(direction.magnitude >= 0.2f)
         {
-            animator.SetFloat("speed",direction.magnitude);
-            float tragetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg;
+            float tragetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, tragetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0,angle,0);
-
-            controller.Move(direction * speed * Time.deltaTime);
+            
+            Vector3 moveDir = Quaternion.Euler(0f,tragetAngle,0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
  
  
