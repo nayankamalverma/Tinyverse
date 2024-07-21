@@ -17,14 +17,11 @@ public class AnimationBring : MonoBehaviour
         {
            // SoundManager.Instance.play(soundplaces.genricPickup);
             Destroy(own);
-            aniamtioncall();
+            Destroy(obj1);
+            obj2.SetActive(true);
            
         }
     }
 
-    void aniamtioncall()
-    {
-        Animator animator1 = obj1.GetComponent<Animator>();
-        animator1.enabled = true;
-    }
+    
 }

@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
+using UnityEngine.SceneManagement;
 
 public class PlayerWin : MonoBehaviour
 {
     [SerializeField] GameObject winscreen;
-  
-    void Start()
-    {
-        winscreen.SetActive(false);
-    }
+
+    [SerializeField] int winscene_no;
 
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("sdsfsdfds");
+       
 
         if (other.gameObject.GetComponent<PlayerMovement>() != null)
         {
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAA");
-            winscreen.SetActive(true);
+            SceneManager.LoadScene(winscene_no);
         }
     }
 }

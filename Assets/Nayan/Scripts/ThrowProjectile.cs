@@ -17,7 +17,7 @@ public class ThrowProjectile : MonoBehaviour
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] int lineSegmentCount = 10;
 
-    [SerializeField] bool allowInvoke =true;
+  //  [SerializeField] bool allowInvoke =true;
 
     private void Awake()
     {
