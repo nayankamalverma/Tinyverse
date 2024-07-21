@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(rayLeft, out RaycastHit hitforward, attackRange) || Physics.Raycast(ray, out RaycastHit hitleft ) || Physics.Raycast(ray, out RaycastHit hitright))
         {
             // If the ray hits something, do something
-            Debug.Log("Hit: " + hitforward.collider.name);
+           // Debug.Log("Hit: " + hitforward.collider.name);
 
             // Optionally, you can visualize the ray in the Scene view
             
