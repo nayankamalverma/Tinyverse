@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5347914703546161010}
   m_Layer: 0
   m_Name: CactusPBR
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Agent: {fileID: 1188541016707223288}
   animator: {fileID: 1021985646032622720}
-  lookRadius: 9
+  lookRadius: 10
   attackSpped: 2
 --- !u!1 &815610979770476509
 GameObject:
