@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
     void attack()
     {
         if (attckCoolDown <= 0) {
-            if (distance <= m_Agent.stoppingDistance) { playerHealth.TakeDamge(1); }
+            if (distance <= m_Agent.stoppingDistance) {  playerHealth.TakeDamge(1); }
             animator.SetTrigger("attack");
             attckCoolDown = attackSpped;
         }
