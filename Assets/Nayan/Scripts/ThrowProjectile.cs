@@ -12,7 +12,6 @@ public class ThrowProjectile : MonoBehaviour
     public bool shooting, readyToShoot;
     Rigidbody ball;
 
-    [SerializeField] Camera cam;
     [SerializeField] Transform throwPoint;
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] int lineSegmentCount = 10;

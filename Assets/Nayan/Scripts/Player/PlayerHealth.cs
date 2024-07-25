@@ -26,8 +26,6 @@ public class PlayerHealth : MonoBehaviour
             animator.SetBool("dead",true);
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             StartCoroutine(DestroyAfterDelay());
-            Cursor.lockState = CursorLockMode.None;
-
         }
     }
     private IEnumerator DestroyAfterDelay()
