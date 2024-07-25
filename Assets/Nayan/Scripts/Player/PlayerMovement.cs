@@ -1,11 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
-using Unity.Mathematics;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -48,8 +42,6 @@ public class PlayerMovement : MonoBehaviour
         dir = Quaternion.Euler(0, attackDirRight, 0) * aim.forward;
         Ray rayRight= new Ray(aim.position, dir);
 
-        RaycastHit hit;
-
         //checking if we hit the ground to reset our falling velocity, otherwise we will fall faster the next time
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
  
@@ -65,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(direction.magnitude >= 0.2f)
         {
-            float tragetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
+            float tragetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, tragetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0,angle,0);
             
@@ -118,9 +110,10 @@ public class PlayerMovement : MonoBehaviour
         //when jump stop playing walk animation 
         if (!isGrounded) animator.SetFloat("speed",0);
         
-        //attack 1
-        if (Input.GetMouseButtonDown(0)) {
-            animator.SetTrigger("attack");
-        }
+    }
+
+    private void OnDestroy()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }

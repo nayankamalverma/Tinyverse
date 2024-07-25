@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CoinCallector : MonoBehaviour
 {
 
-    private TextMeshProUGUI textUGI;
+    [SerializeField] TextMeshProUGUI textUGI;
 
     private void Awake()
     {
@@ -31,5 +32,5 @@ public class CoinCallector : MonoBehaviour
         textUGI.text = " Coin " + score;
     }
 
-
+    
 }

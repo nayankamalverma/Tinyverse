@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,12 +25,14 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetBool("dead",true);
             gameObject.GetComponent<PlayerMovement>().enabled = false;
-            //change scene to lose
-            //player dead
+            StartCoroutine(DestroyAfterDelay());
         }
     }
-
-    public void Update() {
-        
+    private IEnumerator DestroyAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(3);
     }
+
+
 }
