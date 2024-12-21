@@ -11,6 +11,10 @@ public class CameraController : MonoBehaviour
     float rotationX=0 ;
     float rotationY=0 ;
 
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
 
     private void Update()
     { 

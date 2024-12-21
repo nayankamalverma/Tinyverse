@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Android;
 
 public class SoundManager : MonoBehaviour
 {
@@ -66,13 +65,13 @@ public class audio
 public enum soundplaces
 {
    
-    Obsticles,
-    Playerland,
-    Playerdeath,
+    Obstacles,
+    PlayerLand,
+    PlayerHurt,
+    PlayerDeath,
     environmentMusic,
     genricPickup,
     LevelComplete,
-        Button,
-        Button2,
-        platformer,
+    Button,
+    Button2,
 }
