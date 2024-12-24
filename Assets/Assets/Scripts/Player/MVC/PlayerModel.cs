@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Assets.Scripts.Player
 {
 	public class PlayerModel
@@ -9,12 +11,14 @@ namespace Assets.Scripts.Player
 			this.playerSO = playerSO;
 		}
 
-		public float GetInitialHealth() => playerSO.initialHealth;
+		public GameObject GetThrowablePrefab() => playerSO.throwablePrefab;
+        public float GetInitialHealth() => playerSO.initialHealth;
 		public float GetPlayerSpeed() => playerSO.speed;
 		public float GetGravity() => playerSO.gravity;
 		public float GetJumpHeight() => playerSO.jumpHeight;
 		public float GetGroundDistance() => playerSO.groundDistance;
 		public float GetTurnSmoothTime() => playerSO.turnSmoothTime;
 		public float GetCoolDownTime() => playerSO.fireCoolDownTime;
-	}
+        public float GetShootForce() => playerSO.shootForce;
+    }
 }

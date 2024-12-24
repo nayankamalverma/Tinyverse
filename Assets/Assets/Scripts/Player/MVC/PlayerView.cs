@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,11 +34,24 @@ namespace Assets.Scripts.Player
         }
 
         public Animator GetAnimator() => animator;
+        public Transform GetAim() => aim;
         public Transform GetGroundCheck() => groundCheck;
         public LayerMask GetGroundMAsk() => groundMask;
         public CharacterController GetCharController() => characterController;
-        private void OnDisable()
+
+        private void OnTriggerEnter(Collider other)
         {
+            if(other.CompareTag("coins"))
+            {
+                playerController.OnCoinCollected();
+                GameObject.Destroy(other.gameObject);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            //change this to event
+            playerController.OnDeath();
         }
     }
 }

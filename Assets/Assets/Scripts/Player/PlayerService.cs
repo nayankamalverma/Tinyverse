@@ -18,5 +18,10 @@ namespace Assets.Scripts.Player
         {
             playerController = new PlayerController(playerSO, spawnPosition, _camera, eventService);
         }
+
+        public Transform GetPlayerTransform()
+        {
+            return playerController.playerView.transform;
+        }
     }
 }

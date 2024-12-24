@@ -10,9 +10,7 @@ public class PlayerWin : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-       
-
-        if (other.gameObject.GetComponent<PlayerMovement>() != null)
+        if (other != null && other.gameObject.tag == "Player" )
         {
             SceneManager.LoadScene(winscene_no);
         }

@@ -10,10 +10,4 @@ public class Clickable : MonoBehaviour
     {
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = alphaThreshold;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

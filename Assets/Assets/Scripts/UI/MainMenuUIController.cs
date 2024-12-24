@@ -20,7 +20,7 @@ namespace Assets.Scripts.UI
             closeInfoMenu.onClick.AddListener(DeactivateInfoPanel);
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             startGame.onClick.RemoveListener(StartGame);
             infoMenu.onClick.RemoveListener(ActivateInfoPanel);
@@ -29,17 +29,17 @@ namespace Assets.Scripts.UI
         
         private void StartGame()
         {
-            SoundManager.Instance.play(soundplaces.Button);
+            SoundManager.Instance.Play(SoundType.Button);
             SceneManager.LoadScene(gameSceneIndex);
         }
         private void ActivateInfoPanel()
         {
-            SoundManager.Instance.play(soundplaces.Button);
+            SoundManager.Instance.Play(SoundType.Button);
             infoPanel.SetActive(true);
         }
         private void DeactivateInfoPanel()
         {
-            SoundManager.Instance.play(soundplaces.Button);
+            SoundManager.Instance.Play(SoundType.Button);
             infoPanel.SetActive(false);
         }
         private void QuitGame()=>Application.Quit();

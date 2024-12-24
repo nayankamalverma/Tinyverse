@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7927b3d4fb7507441ba44d0b407c81f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c3ad0f7922799f428c7894d05a81ad0, type: 3}
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4323385535243029287, guid: a1a428ec720b60640985ba7c6cef6003,
+    type: 3}
+  throwablePrefab: {fileID: 3195023546987530747, guid: 05345a0b2820eb840b9f3bdd04db090a,
     type: 3}
   initialHealth: 3
   speed: 6
@@ -21,3 +23,4 @@ MonoBehaviour:
   groundDistance: 0.2
   turnSmoothTime: 0.1
   fireCoolDownTime: 2
+  shootForce: 14

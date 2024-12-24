@@ -11,7 +11,7 @@ public class projectileBall : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {   if (collision.gameObject.tag == "enemy")
         {
-             collision.gameObject.GetComponent<EnemyController>().TakeDamage();
+            Debug.Log("hit enemy");
         }
     }
 }

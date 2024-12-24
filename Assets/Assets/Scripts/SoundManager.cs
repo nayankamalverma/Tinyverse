@@ -1,19 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
 
-    public AudioSource soundMusic;
-    public AudioSource soundSFX;
-    public audio[] audios;
+    [SerializeField] private AudioSource soundMusic;
+    [SerializeField] private AudioSource soundSFX;
+    [SerializeField] private audio[] audios;
 
 
     private static SoundManager instance;
-    public static SoundManager Instance
-    { get { return instance; } }
+    public static SoundManager Instance   { get { return instance; } }
     private void Awake()
     {
         if (instance == null)
@@ -28,7 +25,7 @@ public class SoundManager : MonoBehaviour
     }
    
 
-    public void play(soundplaces sounds)
+    public void Play(SoundType sounds)
     {
         AudioClip clip = Getsoundclip(sounds);
         if (clip != null)
@@ -37,14 +34,14 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("clip didnot found");
+            Debug.Log("clip not found");
         }
     }
 
 
 
 
-    private AudioClip Getsoundclip(soundplaces sounds)
+    private AudioClip Getsoundclip(SoundType sounds)
     {
         audio item = Array.Find(audios, i => i.audioType == sounds);
         if (item != null)
@@ -58,11 +55,11 @@ public class SoundManager : MonoBehaviour
 [Serializable]
 public class audio
 {
-    public soundplaces audioType;
+    public SoundType audioType;
     public AudioClip audioClip;
 }
 
-public enum soundplaces
+public enum SoundType
 {
    
     Obstacles,

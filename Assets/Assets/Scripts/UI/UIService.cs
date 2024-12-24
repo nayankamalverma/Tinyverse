@@ -11,6 +11,8 @@ namespace Assets.Scripts.UI
         //playerHealthUI
         [SerializeField] private Image maxHealth;
         [SerializeField] private Image currentHealth;
+        [SerializeField] private TextMeshProUGUI coinText;
+        private int coinCount = 0;
 
         //services
         private EventService eventService;
@@ -20,16 +22,21 @@ namespace Assets.Scripts.UI
         {
             this.eventService = eventService;
             AddEventListeners();
+            coinText.text = "Coins : 0";
         }
 
         private void AddEventListeners()
         {
             eventService.SetInitialHealth.AddListener(SetInitialHealth);
+            eventService.UpdateHealth.AddListener(UpdateHealthUI);
+            eventService.OnCoinCollected.AddListener(UpdateCoinText);
         }
 
         private void OnDisable()
         {
-            eventService.SetInitialHealth.RemoveListener(UpdateHealthUI);
+            eventService.SetInitialHealth.RemoveListener(SetInitialHealth);
+            eventService.UpdateHealth.RemoveListener(UpdateHealthUI);
+            eventService.OnCoinCollected.RemoveListener(UpdateCoinText);
         }
 
         private void SetInitialHealth(float initHealth)
@@ -40,6 +47,12 @@ namespace Assets.Scripts.UI
         private void UpdateHealthUI(float newHealth)
         {
             currentHealth.fillAmount = newHealth / 10;
+        }
+
+        private void UpdateCoinText()
+        {
+            coinCount += 10;
+            coinText.text = "Coins : "+coinCount.ToString();
         }
     }
 }

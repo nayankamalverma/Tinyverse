@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1188541016707223288}
   - component: {fileID: 1554449060427326345}
   - component: {fileID: 2373757977560479141}
-  - component: {fileID: 5347914703546161010}
+  - component: {fileID: 7153502424231229978}
   m_Layer: 0
   m_Name: CactusPBR
   m_TagString: enemy
@@ -72,7 +72,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &1021985646032622720
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -86,6 +86,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -105,7 +106,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -163,7 +164,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5347914703546161010
+--- !u!114 &7153502424231229978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +173,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 242099746673684642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3b49bd054dac24ba70beb16c9b79e1, type: 3}
+  m_Script: {fileID: 11500000, guid: e6111e4a62bc07347ad9eca67c734285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Agent: {fileID: 1188541016707223288}
   animator: {fileID: 1021985646032622720}
-  lookRadius: 10
-  attackSpped: 2
+  chaseRadius: 12
+  attackSpeed: 2
 --- !u!1 &815610979770476509
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +261,9 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 3
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
