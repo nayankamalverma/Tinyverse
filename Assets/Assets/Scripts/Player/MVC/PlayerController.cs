@@ -1,7 +1,5 @@
 using Assets.Scripts.Events;
 using System;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Scripts.Player

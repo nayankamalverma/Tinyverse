@@ -3,7 +3,6 @@ using Assets.Scripts.Events;
 using Assets.Scripts.Player;
 using Assets.Scripts.UI;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Scripts

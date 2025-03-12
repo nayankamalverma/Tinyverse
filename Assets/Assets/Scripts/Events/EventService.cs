@@ -1,7 +1,4 @@
-﻿using Unity.VisualScripting;
-using UnityEngine.Rendering;
-
-namespace Assets.Scripts.Events
+﻿namespace Assets.Scripts.Events
 {
     public class EventService
     {

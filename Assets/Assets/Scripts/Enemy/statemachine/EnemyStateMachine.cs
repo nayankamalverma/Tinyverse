@@ -1,7 +1,5 @@
-﻿using Assets.Scripts.Enemy;
-using Assets.Scripts.Events;
+﻿using Assets.Scripts.Events;
 using System.Collections.Generic;
-using static UnityEditor.Rendering.InspectorCurveEditor;
 
 namespace Assets.Scripts.Enemy
 {

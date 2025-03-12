@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using Unity.Burst.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.Player
 {
