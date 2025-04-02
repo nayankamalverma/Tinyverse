@@ -1,5 +1,4 @@
-﻿using Unity.IO.LowLevel.Unsafe;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Enemy
 {
@@ -7,12 +6,12 @@ namespace Assets.Scripts.Enemy
     {
         private float distance;
 
-        public ChasingState(EnemyController controller) : base(controller) { }
+        public ChasingState(EnemyController controller) : base(controller){}
 
         public override void Enter()
         {
-            Debug.Log("Chasing");
             controller.enemyView.GetAgent().isStopped = false;
+            controller.enemyView.GetAnimator().SetBool("following",true);
         }
 
         public override void Update()
@@ -30,5 +29,9 @@ namespace Assets.Scripts.Enemy
             }
         }
 
+        public override void Exit()
+        {
+            controller.enemyView.GetAnimator().SetBool("following", false);
+        }
     }
 }

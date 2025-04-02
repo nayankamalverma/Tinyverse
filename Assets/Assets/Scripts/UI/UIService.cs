@@ -1,5 +1,4 @@
-using System;
-using Assets.Scripts.Events;
+using Assets.Scripts.Utilities.Events;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,10 +16,9 @@ namespace Assets.Scripts.UI
         //services
         private EventService eventService;
         
-
-        public void SetServices(EventService eventService)
+        public void Start()
         {
-            this.eventService = eventService;
+            eventService = EventService.Instance;
             AddEventListeners();
             coinText.text = "Coins : 0";
         }
@@ -52,7 +50,7 @@ namespace Assets.Scripts.UI
         private void UpdateCoinText()
         {
             coinCount += 10;
-            coinText.text = "Coins : "+coinCount.ToString();
+            coinText.text = "Coins : "+coinCount;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Events;
+﻿using Assets.Scripts.Utilities.Events;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemy
@@ -6,16 +6,11 @@ namespace Assets.Scripts.Enemy
     public class AttackingState : IState
     {
         private float attackCoolDown;
-        private EventService eventService;
 
-        public AttackingState(EnemyController controller, EventService eventService) : base(controller)
-        { 
-            this.eventService = eventService;
-        }
+        public AttackingState(EnemyController controller) : base(controller){}
 
         public override void Enter()
         {
-            Debug.Log("Attack");
             controller.enemyView.GetAgent().isStopped = true;
         }
 
@@ -26,14 +21,14 @@ namespace Assets.Scripts.Enemy
             if (attackCoolDown <= 0)
             {
                 controller.enemyView.GetAnimator().SetTrigger("attack");
-                eventService.OnPlayerAttacked.Invoke(1);
+                EventService.Instance.OnPlayerAttacked.Invoke(1);
                 attackCoolDown = controller.enemyView.GetAttackSpeed();
             }
+
             if (distance <= controller.enemyView.GetChaseRadius() && distance >= controller.enemyView.GetAgent().stoppingDistance)
             {
                 controller.ChangeState(EnemyState.Chase);
             }
         }
-
     }
 }

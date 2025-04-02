@@ -1,7 +1,4 @@
-﻿using Assets.Scripts.Enemy;
-using Assets.Scripts.Events;
-using System.Collections.Generic;
-using static UnityEditor.Rendering.InspectorCurveEditor;
+﻿using System.Collections.Generic;
 
 namespace Assets.Scripts.Enemy
 {
@@ -11,12 +8,10 @@ namespace Assets.Scripts.Enemy
         private IState currentState;
         private EnemyState currState;
         public Dictionary<EnemyState, IState> States = new Dictionary<EnemyState, IState>();
-        private EventService eventService;
 
-        public EnemyStateMachine(EnemyController owner, EventService eventService)
+        public EnemyStateMachine(EnemyController owner)
         {
             Owner = owner;
-            this.eventService = eventService;
             CreateState();
         }
 
@@ -24,7 +19,7 @@ namespace Assets.Scripts.Enemy
         {
             States.Add(EnemyState.Idle, new IdealState(Owner));
             States.Add(EnemyState.Chase, new ChasingState(Owner));
-            States.Add(EnemyState.Attack, new AttackingState(Owner,eventService));
+            States.Add(EnemyState.Attack, new AttackingState(Owner));
         }
 
         protected void ChangeState(IState newState)

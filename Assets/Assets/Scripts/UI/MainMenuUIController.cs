@@ -1,6 +1,6 @@
-using System;
+using Assets.Scripts.Main;
+using Assets.Scripts.Utilities.Events;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.UI
@@ -11,7 +11,6 @@ namespace Assets.Scripts.UI
         [SerializeField] private Button infoMenu;
         [SerializeField] private Button closeInfoMenu;
         [SerializeField] private GameObject infoPanel;
-        [SerializeField] private int gameSceneIndex;
  
         private void Awake()
         {
@@ -29,17 +28,17 @@ namespace Assets.Scripts.UI
         
         private void StartGame()
         {
-            SoundManager.Instance.Play(SoundType.Button);
-            SceneManager.LoadScene(gameSceneIndex);
+            SoundService.Instance.Play(SoundType.Button);
+            EventService.Instance.OnPlayButtonClicked.Invoke();
         }
         private void ActivateInfoPanel()
         {
-            SoundManager.Instance.Play(SoundType.Button);
+            SoundService.Instance.Play(SoundType.Button);
             infoPanel.SetActive(true);
         }
         private void DeactivateInfoPanel()
         {
-            SoundManager.Instance.Play(SoundType.Button);
+            SoundService.Instance.Play(SoundType.Button);
             infoPanel.SetActive(false);
         }
         private void QuitGame()=>Application.Quit();

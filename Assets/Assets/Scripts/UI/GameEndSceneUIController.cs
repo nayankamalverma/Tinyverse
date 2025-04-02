@@ -1,35 +1,37 @@
+using Assets.Scripts.Main;
+using Assets.Scripts.Utilities.Events;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameEndSceneUIController : MonoBehaviour
+namespace Assets.Scripts.UI
 {
-    [SerializeField] private Button  RestartGamebutton;
-    [SerializeField] private Button  menubutton;
-    [SerializeField] private int GameSceneIndex = 1;
-    [SerializeField] private int MainMenuSceneIndex = 0;
-
-    private void Awake()
+    public class GameEndSceneUIController : MonoBehaviour
     {
-        RestartGamebutton.onClick.AddListener(RestartGame);
-        menubutton.onClick.AddListener(GoToMenu);
-    }
+        [SerializeField] private Button RestartGamebutton;
+        [SerializeField] private Button menubutton;
 
-    private void OnDestroy()
-    {
-        RestartGamebutton.onClick.RemoveListener(RestartGame);
-        menubutton.onClick.RemoveListener(GoToMenu);
-    }
+        private void Awake()
+        {
+            RestartGamebutton.onClick.AddListener(RestartGame);
+            menubutton.onClick.AddListener(GoToMenu);
+        }
 
-    public void RestartGame()
-    {
-        SoundManager.Instance.Play(SoundType.Button);
-        SceneManager.LoadScene(GameSceneIndex);
-    }
+        private void OnDestroy()
+        {
+            RestartGamebutton.onClick.RemoveListener(RestartGame);
+            menubutton.onClick.RemoveListener(GoToMenu);
+        }
 
-    public void GoToMenu()
-    {
-        SoundManager.Instance.Play(SoundType.Button2);
-        SceneManager.LoadScene(MainMenuSceneIndex); 
+        public void RestartGame()
+        {
+            SoundService.Instance.Play(SoundType.Button);
+            EventService.Instance.OnPlayButtonClicked.Invoke();
+        }
+
+        public void GoToMenu()
+        {
+            SoundService.Instance.Play(SoundType.Button2);
+            EventService.Instance.OnMainMenuButtonClicked.Invoke();
+        }
     }
 }

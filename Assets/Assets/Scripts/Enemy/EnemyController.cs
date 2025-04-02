@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Events;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Enemy
 {
@@ -10,18 +9,18 @@ namespace Assets.Scripts.Enemy
         public Transform playerTransform { get; private set; }
         public Vector3 position => enemyView.transform.position;
 
-        public EnemyController(EnemyView enemyView,Transform playerTransform, EventService eventService)
+        public EnemyController(EnemyView enemyView,Transform playerTransform)
         {
             this.enemyView = enemyView;
             this.playerTransform = playerTransform;
             enemyView.SetController(this);
-            CreateStateMachine(eventService);
+            CreateStateMachine();
             stateMachine.ChangeState(EnemyState.Idle);
         }
 
-        private void CreateStateMachine(EventService eventService)
+        private void CreateStateMachine()
         {
-            stateMachine = new EnemyStateMachine(this, eventService);
+            stateMachine = new EnemyStateMachine(this);
         }
 
         public void Update()
@@ -56,7 +55,7 @@ namespace Assets.Scripts.Enemy
         {
             enemyView.GetAnimator().SetBool("dead", true);
             enemyView.enabled = false;
-            GameObject.Destroy(enemyView.gameObject, 2);
+            Object.Destroy(enemyView.gameObject, 2);
         }
     }
 }
