@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 830814122193624108}
   - component: {fileID: 4775309510585255898}
   - component: {fileID: 5216227175899823142}
-  - component: {fileID: 6766503128937951131}
   - component: {fileID: 5871874483580222285}
   m_Layer: 0
   m_Name: CoinConeect
@@ -88,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6766503128937951131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8619008218210030306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f74090a9bd50cef4abb69441aef7c8bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isScalable: 1
-  minScale: {x: 0.035, y: 0.035, z: 0.035}
-  maxScale: {x: 0.05, y: 0.05, z: 0.05}
-  scalingDuration: 1
-  rotationSpeed: 65
-  delayBetweenRotations: 0
-  rotateX: 1
-  rotateY: 1
-  rotateZ: 1
 --- !u!135 &5871874483580222285
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using Assets.Scripts.Main;
+using Assets.Scripts.Utilities.Events;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
@@ -36,16 +38,22 @@ namespace Assets.Scripts.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.CompareTag("coins"))
+            if (other.CompareTag("coins"))
             {
                 playerController.OnCoinCollected();
-                GameObject.Destroy(other.gameObject);
+                Destroy(other.gameObject);
+            }
+
+            if (other.CompareTag("Key")) // game win logic
+            {
+                Debug.Log("win");
+                SoundService.Instance.Play(SoundType.LevelComplete);
+                EventService.Instance.OnPlayerWin.Invoke();
             }
         }
 
         private void OnDestroy()
         {
-            //change this to event
             playerController.OnDeath();
         }
     }

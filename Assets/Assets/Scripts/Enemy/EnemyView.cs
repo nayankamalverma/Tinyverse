@@ -33,7 +33,7 @@ namespace Assets.Scripts.Enemy
             if (collision.gameObject.CompareTag("ball"))
             {
                 controller.TakeDamage();
-                GameObject.Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
         }
 

@@ -186,7 +186,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -783,7 +783,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -1158,7 +1158,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -2397,7 +2397,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -5216,7 +5216,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -5630,7 +5630,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -6470,6 +6470,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 7b9d2a4122e0f164e9d6a8c8fc29bb16, type: 2}
+    - target: {fileID: 4742473837712756890, guid: a15b0402e33f7df4e9a6eebb5df3dc92,
+        type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -66.99707
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: a15b0402e33f7df4e9a6eebb5df3dc92,
+        type: 3}
+      propertyPath: m_LocalReferencePoint.y
+      value: 1248.2035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: a15b0402e33f7df4e9a6eebb5df3dc92,
+        type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: -6.126892
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7122,7 +7137,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -7590,7 +7605,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -8174,7 +8189,6 @@ GameObject:
   - component: {fileID: 593915858}
   - component: {fileID: 593915857}
   - component: {fileID: 593915856}
-  - component: {fileID: 593915855}
   - component: {fileID: 593915854}
   m_Layer: 0
   m_Name: GlowBox1 (2)
@@ -8210,21 +8224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53e7cfb894226741b017717fad08201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  own: {fileID: 593915852}
   obj1: {fileID: 1174922184}
   obj2: {fileID: 1053106167}
---- !u!114 &593915855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593915852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67bb3650c28f24db93aaac6f380270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &593915856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8889,7 +8890,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: df55987922c189540b328c7863714f19,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.13
+      value: 2.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df55987922c189540b328c7863714f19,
         type: 3}
@@ -8935,10 +8936,15 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 0c8a6f735cac3aa4795373491718b52c, type: 2}
+      objectReference: {fileID: 2100000, guid: 648741a45cd8b6a4db6b65c70eaad475, type: 2}
     - target: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
         type: 3}
       propertyPath: m_Name
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
+        type: 3}
+      propertyPath: m_TagString
       value: Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8948,16 +8954,35 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2000916038}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2000916043}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2000916048}
+      addedObject: {fileID: 645758099}
   m_SourcePrefab: {fileID: 100100000, guid: df55987922c189540b328c7863714f19, type: 3}
+--- !u!1 &645758098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
+    type: 3}
+  m_PrefabInstance: {fileID: 645758097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &645758099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645758098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9305117, y: 5.9348054, z: 4.793977}
+  m_Center: {x: 0, y: 0.00000011920932, z: 0.00000011920932}
 --- !u!1001 &649102146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9685,7 +9710,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -10702,7 +10727,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -11059,7 +11084,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -11788,7 +11813,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -12161,7 +12186,6 @@ GameObject:
   - component: {fileID: 893442120}
   - component: {fileID: 893442119}
   - component: {fileID: 893442118}
-  - component: {fileID: 893442117}
   - component: {fileID: 893442116}
   m_Layer: 0
   m_Name: GlowBox1 (1)
@@ -12197,21 +12221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53e7cfb894226741b017717fad08201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  own: {fileID: 893442114}
   obj1: {fileID: 1177996926}
   obj2: {fileID: 1174922184}
---- !u!114 &893442117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893442114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67bb3650c28f24db93aaac6f380270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &893442118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12749,7 +12760,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -13732,7 +13743,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -13829,7 +13840,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -14404,7 +14415,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -15132,13 +15143,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097503167}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.2543262, z: -0, w: -0.9671185}
   m_LocalPosition: {x: 149.89249, y: 26.299923, z: 81.41577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -330.533, z: 0}
 --- !u!1001 &1099452514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17082,7 +17093,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -17677,7 +17688,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -18022,54 +18033,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1290000191}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1298008069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1298008071}
-  - component: {fileID: 1298008070}
-  m_Layer: 0
-  m_Name: SceneService
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1298008070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298008069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36135bcd1e27f9e438847009713142b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuSceneIndex: 0
-  Level1SceneIndex: 1
-  WinSceneIndex: 2
-  LoseSceneIndex: 3
---- !u!4 &1298008071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298008069}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1957486759}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1327301559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19132,7 +19095,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -22828,7 +22791,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -22902,7 +22865,6 @@ GameObject:
   - component: {fileID: 1670514260}
   - component: {fileID: 1670514263}
   - component: {fileID: 1670514262}
-  - component: {fileID: 1670514261}
   m_Layer: 5
   m_Name: Coin
   m_TagString: Untagged
@@ -22929,18 +22891,6 @@ RectTransform:
   m_AnchoredPosition: {x: 850, y: -25}
   m_SizeDelta: {x: -1700, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1670514261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670514259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75fcbad395ad1874fb4d2180198909b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1670514262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24303,7 +24253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -24870,7 +24820,6 @@ GameObject:
   - component: {fileID: 1815538007}
   - component: {fileID: 1815538006}
   - component: {fileID: 1815538005}
-  - component: {fileID: 1815538004}
   - component: {fileID: 1815538009}
   m_Layer: 0
   m_Name: GlowBox1
@@ -24879,18 +24828,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1815538004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815538003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67bb3650c28f24db93aaac6f380270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1815538005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24992,7 +24929,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53e7cfb894226741b017717fad08201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  own: {fileID: 1815538003}
   obj1: {fileID: 1690171536}
   obj2: {fileID: 1177996926}
 --- !u!1001 &1826583737
@@ -25809,7 +25745,6 @@ MonoBehaviour:
   - {fileID: 2038336816}
   CameraController: {fileID: 1097503168}
   UIService: {fileID: 1428343518}
-  SceneService: {fileID: 1298008070}
 --- !u!4 &1957486759
 Transform:
   m_ObjectHideFlags: 0
@@ -25824,7 +25759,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1174412629}
-  - {fileID: 1298008071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1958841149
@@ -25894,7 +25828,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -26109,59 +26043,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 434bec996624f4e4c8f4fcff0adfb926, type: 3}
---- !u!1 &2000916037 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: df55987922c189540b328c7863714f19,
-    type: 3}
-  m_PrefabInstance: {fileID: 645758097}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2000916038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000916037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67bb3650c28f24db93aaac6f380270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2000916043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000916037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6942fcc15fe118448be61e10786dd673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winscreen: {fileID: 0}
-  winscene_no: 2
---- !u!65 &2000916048
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000916037}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9305117, y: 5.9348054, z: 4.793977}
-  m_Center: {x: 0, y: 0.00000011920932, z: 0.00000011920932}
 --- !u!1 &2002088644
 GameObject:
   m_ObjectHideFlags: 0
@@ -26403,7 +26284,6 @@ GameObject:
   - component: {fileID: 2037888402}
   - component: {fileID: 2037888401}
   - component: {fileID: 2037888400}
-  - component: {fileID: 2037888399}
   - component: {fileID: 2037888398}
   m_Layer: 0
   m_Name: GlowBox1 (3)
@@ -26439,21 +26319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53e7cfb894226741b017717fad08201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  own: {fileID: 2037888396}
   obj1: {fileID: 1053106167}
   obj2: {fileID: 2058972963}
---- !u!114 &2037888399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037888396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67bb3650c28f24db93aaac6f380270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2037888400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26698,7 +26565,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -27585,7 +27452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -28075,18 +27942,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 138674789}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &273200010486822301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4194160320476645604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c00d6850734e5429aeadb007779a49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1722640081919769728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28294,7 +28149,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coinCallector
       value: 
-      objectReference: {fileID: 1670514261}
+      objectReference: {fileID: 0}
     - target: {fileID: 6766503128937951131, guid: b4fd355634fe6cb44af5b47b75fa34b5,
         type: 3}
       propertyPath: rotationspeed
@@ -28333,7 +28188,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6544803415667283581}
-  - component: {fileID: 273200010486822301}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged

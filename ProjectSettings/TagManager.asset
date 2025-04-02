@@ -7,6 +7,8 @@ TagManager:
   - enemy
   - coins
   - ball
+  - 'Coin '
+  - Key
   layers:
   - Default
   - TransparentFX
